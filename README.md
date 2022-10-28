@@ -1,6 +1,7 @@
 # Liquibase Validate Action
 Official GitHub Action to run Liquibase Validate in your GitHub Action Workflow. For more information on how validate works visit the [Official Liquibase Documentation](https://docs.liquibase.com/commands/home.html).
-
+## Validate
+Validate the changelog for errors
 ## Usage
 ```yaml
 steps:
