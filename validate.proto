@@ -14,15 +14,17 @@ service ValidateService {
 
 /* Validate the changelog for errors */
 message ValidateRequest {
-  string changelog_file = 1; // *required* The root changelog
-  optional string default_catalog_name = 2; // The default catalog name to use for the database connection
-  optional string default_schema_name = 3; // The default schema name to use for the database connection
-  optional string driver = 4; // The JDBC driver class
-  optional string driver_properties_file = 5; // The JDBC driver properties file
-  optional string password = 6; // Password to use to connect to the database
-  string url = 7; // *required* The JDBC database connection URL
-  optional string username = 8; // Username to use to connect to the database
-  liquibase.GlobalOptions global_options = 9;
+  string changelog_file = 1; // *required* The root changelog file
+  optional string contexts = 2; // Context string to use for filtering
+  optional string default_catalog_name = 3; // The default catalog name to use for the database connection
+  optional string default_schema_name = 4; // The default schema name to use for the database connection
+  optional string driver = 5; // The JDBC driver class
+  optional string driver_properties_file = 6; // The JDBC driver properties file
+  optional string label_filter = 7; // Label expression to use for filtering
+  optional string password = 8; // Password to use to connect to the database
+  string url = 9; // *required* The JDBC database connection URL
+  optional string username = 10; // Username to use to connect to the database
+  liquibase.GlobalOptions global_options = 11;
 }
 
 message Response {
