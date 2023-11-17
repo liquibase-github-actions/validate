@@ -6,7 +6,7 @@ Validate the changelog for errors
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/validate@v4.24.0
+- uses: liquibase-github-actions/validate@v4.25.0
   with:
     # The root changelog file
     # string
@@ -70,7 +70,7 @@ The liquibase validate action accepts all valid liquibase global options as opti
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/validate@v4.24.0
+  - uses: liquibase-github-actions/validate@v4.25.0
     with:
       changelogFile: ""
       url: ""
